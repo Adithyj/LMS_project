@@ -1,7 +1,7 @@
 package com.example.lms.entity;
 
 import jakarta.persistence.*;
-
+@Entity
 public class Quiz {
 
     @Id
@@ -14,6 +14,18 @@ public class Quiz {
     @ManyToOne
     @JoinColumn(name = "course_id")
     private Course course;
+    
+    @ManyToOne
+    @JoinColumn(name = "instructor_id")
+    private Instructor instructor;
+
+	public Instructor getInstructor() {
+		return instructor;
+	}
+
+	public void setInstructor(Instructor instructor) {
+		this.instructor = instructor;
+	}
 
 	public String getTitle() {
 		return title;

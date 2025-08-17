@@ -40,7 +40,7 @@ public class QuizService {
 
     public List<Quiz> getQuizzesByInstructor(Long instructorId) {
         logger.info("Fetching quizzes for instructor ID: {}", instructorId);
-        List<Quiz> quizzes = quizRepository.findByInstructor(instructorId);
+        List<Quiz> quizzes = quizRepository.findByInstructorId(instructorId);
         logger.debug("Found {} quizzes for instructor ID: {}", quizzes.size(), instructorId);
         return quizzes;
     }

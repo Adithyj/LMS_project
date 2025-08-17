@@ -1,7 +1,7 @@
 package com.example.lms.entity;
 
 import jakarta.persistence.*;
-
+@Entity
 public class QuizQuestion {
 
     @Id

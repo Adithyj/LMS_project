@@ -40,7 +40,7 @@ public class QuizQuestionService {
 
     public List<QuizQuestion> getQuestionsByQuiz(Long quizId) {
         logger.info("Fetching questions for quiz ID: {}", quizId);
-        List<QuizQuestion> questions = quizQuestionRepository.findByQuiz_QuizId(quizId);
+        List<QuizQuestion> questions = quizQuestionRepository.findByQuiz_Id(quizId);
         logger.debug("Found {} questions for quiz ID: {}", questions.size(), quizId);
         return questions;
     }

@@ -8,5 +8,5 @@ import com.example.lms.entity.QuizQuestion;
 
 public interface QuizQuestionRepository extends JpaRepository<QuizQuestion,Long> {
 
-	 List<QuizQuestion> findByQuiz_QuizId(Long quizId);
+	 List<QuizQuestion> findByQuiz_Id(Long quizId);
 }

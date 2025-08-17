@@ -67,13 +67,13 @@ class QuizServiceTest {
 
     @Test
     void testGetQuizzesByInstructor() {
-        when(quizRepository.findByInstructor(100L)).thenReturn(Arrays.asList(quiz));
+        when(quizRepository.findByInstructorId(100L)).thenReturn(Arrays.asList(quiz));
 
         List<Quiz> quizzes = quizService.getQuizzesByInstructor(100L);
 
         assertEquals(1, quizzes.size());
         assertEquals("Sample Quiz", quizzes.get(0).getTitle());
-        verify(quizRepository, times(1)).findByInstructor(100L);
+        verify(quizRepository, times(1)).findByInstructorId(100L);
     }
 
     @Test

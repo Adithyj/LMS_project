@@ -7,4 +7,6 @@ import com.example.lms.entity.Student;
 public interface StudentRepository extends JpaRepository<Student,Long> {
 
 	Student findByEmail(String email);
+
+	
 }

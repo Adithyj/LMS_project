@@ -20,12 +20,13 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
-            .csrf().disable()
+            .csrf().disable() // Not needed for REST APIs
             .authorizeHttpRequests()
-            .requestMatchers("/lms/students/**").hasRole("STUDENT") // Only students can access
-            .anyRequest().authenticated()
+                .requestMatchers("/lms/students/**").hasRole("STUDENT") // Students only
+                .anyRequest().authenticated() // everything else needs authentication
             .and()
-            .httpBasic(); // Basic authentication (can replace with formLogin later)
+            .httpBasic(); // REST-friendly authentication (no HTML login)
+
         return http.build();
     }
 
