@@ -97,5 +97,9 @@ public class QuizQuestion {
 		this.correctAnswer = correctAnswer;
 		this.quiz = quiz;
 	}
+
+	public QuizQuestion() {
+		// TODO Auto-generated constructor stub
+	}
     
 }

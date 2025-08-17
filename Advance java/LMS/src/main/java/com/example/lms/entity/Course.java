@@ -56,6 +56,15 @@ public class Course {
 		this.description = description;
 		this.instructor = instructor;
 	}
+
+	public Course() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public void setId(long l) {
+		this.id = l;
+		
+	}
     
     
 }

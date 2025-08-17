@@ -18,15 +18,15 @@ public class Grade {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Integer score;  
+    private double score;  
     private String grade;    
 
-    public Integer getScore() {
+    public Double getScore() {
 		return score;
 	}
 
-	public void setScore(Integer score) {
-		this.score = score;
+	public void setScore(double d) {
+		this.score = d;
 	}
 
 	public String getGrade() {
@@ -70,5 +70,15 @@ public class Grade {
     @OneToOne
     @JoinColumn(name = "submission_id", nullable = false)
     private QuizSubmission submission;
+
+	public void setId(Long id2) {
+		this.id=id2;
+		
+	}
+
+	public Object getId() {
+		// TODO Auto-generated method stub
+		return this.id;
+	}
 
    }

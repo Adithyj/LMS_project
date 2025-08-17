@@ -38,5 +38,12 @@ public class Instructor {
 		this.name = name;
 		this.email = email;
 	}
+	public Instructor() {
+		// TODO Auto-generated constructor stub
+	}
+	public void setInstructorId(Long id2) {
+		this.id = id2;
+		
+	}
     
 }

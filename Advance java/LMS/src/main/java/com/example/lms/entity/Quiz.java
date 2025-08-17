@@ -50,6 +50,25 @@ public class Quiz {
 		this.totalMarks = totalMarks;
 		this.course = course;
 	}
+
+	public Quiz() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public void setQuizId(Long id2) {
+		this.id = id2;
+		
+	}
+
+	public Object getQuizId() {
+		// TODO Auto-generated method stub
+		return this.id;
+	}
+
+	public Object getId() {
+		// TODO Auto-generated method stub
+		return this.id;
+	}
     
     
 }

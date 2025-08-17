@@ -25,4 +25,44 @@ public class StudentAnswer {
     @ManyToOne
     @JoinColumn(name = "submission_id", nullable = false)
     private QuizSubmission submission;
+
+	public void setId(Long id2) {
+		this.id =id2;
+	}
+
+	public String getSelectedAnswer() {
+		return selectedAnswer;
+	}
+
+	public void setSelectedAnswer(String selectedAnswer) {
+		this.selectedAnswer = selectedAnswer;
+	}
+
+	public Boolean getIsCorrect() {
+		return isCorrect;
+	}
+
+	public void setIsCorrect(Boolean isCorrect) {
+		this.isCorrect = isCorrect;
+	}
+
+	public QuizQuestion getQuestion() {
+		return question;
+	}
+
+	public void setQuestion(QuizQuestion question) {
+		this.question = question;
+	}
+
+	public QuizSubmission getSubmission() {
+		return submission;
+	}
+
+	public void setSubmission(QuizSubmission submission) {
+		this.submission = submission;
+	}
+
+	public Long getId() {
+		return id;
+	}
 }

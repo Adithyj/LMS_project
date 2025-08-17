@@ -76,5 +76,14 @@ public class Enrollment {
                 ", enrollmentDate=" + enrollmentDate +
                 '}';
     }
+
+	public void setId(Long id2) {
+		this.id=id2;
+		
+	}
+
+	public Long getId() {
+		return this.id;
+	}
 }
 

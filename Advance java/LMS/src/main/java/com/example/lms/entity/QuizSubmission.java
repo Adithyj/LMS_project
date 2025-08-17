@@ -1,6 +1,7 @@
 package com.example.lms.entity;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
@@ -38,5 +39,56 @@ public class QuizSubmission {
     @OneToOne(mappedBy = "submission", cascade = CascadeType.ALL)
     private Grade grading;
 
-    // getters & setters...
+	public LocalDateTime getSubmittedAt() {
+		return submittedAt;
+	}
+
+	public void setSubmittedAt(LocalDateTime submittedAt) {
+		this.submittedAt = submittedAt;
+	}
+
+	public Student getStudent() {
+		return student;
+	}
+
+	public void setStudent(Student student) {
+		this.student = student;
+	}
+
+	public Quiz getQuiz() {
+		return quiz;
+	}
+
+	public void setQuiz(Quiz quiz) {
+		this.quiz = quiz;
+	}
+
+	public List<StudentAnswer> getAnswers() {
+		return answers;
+	}
+
+	public void setAnswers(List<StudentAnswer> answers) {
+		this.answers = answers;
+	}
+
+	public Grade getGrading() {
+		return grading;
+	}
+
+	public void setGrading(Grade grading) {
+		this.grading = grading;
+	}
+
+	public void setId(Long id2) {
+		
+		this.id=id2;
+		
+	}
+
+	public Object getId() {
+		// TODO Auto-generated method stub
+		return this.id;
+	}
+
+    
 }
